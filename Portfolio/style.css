@@ -44,11 +44,21 @@ body{
 }
 
 .navbar {
-    margin: 0;
+    margin: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    width: 70%;
+    z-index: 1000; /* Ensure navbar is above other content */
+    left: 15%;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 
@@ -80,8 +90,6 @@ body{
     transform-origin: right;
     transition: color 0.3s ease;
     transform: 0.2s ease;
-
-
 }
 
 .navbar ul{
@@ -115,6 +123,18 @@ body{
     font-size: 1.5rem;
     color: black
 }
+.content p{
+    font-family: 'Courier New', Courier, monospace;
+}
+#demo::after {
+     content: '|';
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
 .main .content h1 {
     font-size: 2.5rem;
     margin-top: 0px;
@@ -216,6 +236,7 @@ body{
     font-family: monospace; /* Use monospace font for secondary button */
     font-size: small;
     border: 2px solid #22c1c3; /* Neon blue border */
+    justify-content: space-evenly;
 }
 .btn-primary {
     background-color: #22c1c3; /* Neon blue background */
@@ -271,50 +292,201 @@ body{
     margin-bottom: 20px;
 }
 
-.skills {
-    padding: 50px;
-    text-align: center;
-    border-radius: 10px;
+.skills{
+    display: flex;
+    
+    flex-direction: column;
+    padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-}
-.skills  {
-    background-color: transparent;
-    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 1, 1);
     border-radius: 10px;
-    text-align: center;
-    width: 335px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-    margin: auto;
+    background-color: transparent;
 }
-.skills h2 {
-    font-size: 2rem;
-    color: black;
+.progress-bar {
+    width: auto;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
     margin-bottom: 20px;
-    text-decoration: underline;
-    text-transform: uppercase;
-}
-.skills ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
     display: flex;
-    flex-wrap: unset;
-    gap: 20px;
-    align-items: center;
+    flex-direction: row;
 }
-
-.skills ul li {
-    font-size: 2.5rem;        /* Make icons bigger */
-    transition: transform 0.2s, color 0.2s;
+.progress1 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: auto;
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress1 1s linear forwards;
 }
-
-.skills ul li:hover {
-    color: white;           /* Change color on hover */
-    transform: scale(1.2);    /* Slightly enlarge on hover */
+.progress2 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: auto; /* Set to 0 initially, will be updated with JavaScript */
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress2 1s linear forwards;
 }
-
-
+.progress3 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: auto; /* Set to 0 initially, will be updated with JavaScript */
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress3 1s linear forwards;
+}
+.progress4 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: auto; /* Set to 0 initially, will be updated with JavaScript */
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress4 1s linear forwards;
+}
+.progress5 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: auto; /* Set to 0 initially, will be updated with JavaScript */
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress5 1s linear forwards;
+}
+.progress6 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: 100%; /* Set to 0 initially, will be updated with JavaScript */
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress6 1s linear forwards;
+}
+.progress7 {
+    height: 20px;
+    background-color: #22c1c3;
+    width: auto; /* Set to 0 initially, will be updated with JavaScript */
+    transition:step-end width 0.5s ;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    text-align: end;
+    line-height: 20px; /* Center text vertically */
+    animation: progress7 1s linear forwards;
+}
+.progress-bar span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #22c1c3;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    color: white;
+    line-height: 20px; /* Center text vertically */
+    font-size: 0.8rem;
+}
+.progress-bar span::after {
+    content: attr(data-progress);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #22c1c3;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    color: white;
+    line-height: 20px; /* Center text vertically */
+    font-size: 0.8rem;
+}
+.progress-bar span[data-progress="100%"] {
+    background-color: #22c1c3; /* Change color to neon blue when complete */
+}
+.progress-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.progress-label {
+    padding: 0 10px;
+    color: white;
+}
+@keyframes progress1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 95%;
+    }
+}
+@keyframes progress2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
+@keyframes progress3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 65%;
+    }
+}
+@keyframes progress4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 65%;
+    }
+}
+@keyframes progress5 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+@keyframes progress6 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+@keyframes progress7 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
 .services {
     padding: 50px;
     text-align: center;
@@ -390,7 +562,7 @@ body{
 .projects img:active {
     transform: scale(0.95); /* Slight shrink on click */
 }
-.contact {
+.contact-section {
     padding: 50px;
     text-align: center;
     border-radius: 10px;
@@ -611,5 +783,67 @@ body, html {
 @media (max-width: 600px) {
   html, body {
     overflow-x: hidden;
+  }
+}
+
+/* Responsive progress bar */
+@media (max-width: 700px) {
+  .container {
+    padding: 10px;
+    max-width: 98vw;
+    box-sizing: border-box;
+  }
+  .progress-bar {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 16px;
+  }
+  .progress1,
+  .progress2,
+  .progress3,
+  .progress4,
+  .progress5,
+  .progress6,
+  .progress7 {
+    height: 16px;
+    font-size: 0.7rem;
+    line-height: 16px;
+  }
+  .progress-bar span,
+  .progress-bar span::after {
+    font-size: 0.7rem;
+    line-height: 16px;
+  }
+  .progress-label {
+    font-size: 0.9rem;
+    padding: 0 6px;
+  }
+  .progress-container {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .progress1,
+  .progress2,
+  .progress3,
+  .progress4,
+  .progress5,
+  .progress6,
+  .progress7 {
+    height: 12px;
+    font-size: 0.6rem;
+    line-height: 12px;
+  }
+  .progress-bar span,
+  .progress-bar span::after {
+    font-size: 0.6rem;
+    line-height: 12px;
+  }
+  .progress-label {
+    font-size: 0.8rem;
+    padding: 0 4px;
   }
 }
