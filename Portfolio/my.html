@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <script src="portfolio.js"></script>
+    <title>Shawaiz | Web Developer & Graphic Designer</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio of Shawaiz - Web Developer & Graphic Designer specializing in modern, responsive websites and creative design.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Shawaiz Portfolio">
+    <meta property="og:description" content="Web developer & graphic designer with a passion for clean code and visual design.">
+    <meta property="og:image" content="Me.png"> <!-- Replace with a correct preview image URL if needed -->
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <script src="portfolio.js" defer></script>
+    <link rel="stylesheet" href="portfolio.js">
+
+    <!-- Smooth scroll -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
+
+    <!-- Header -->
+    <header class="header">
         <nav class="navbar">
-            <a>Shawaiz</a>
+            <a href="#home" class="logo">Shawaiz</a>
             <ul class="nav-links">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#skills">Skills</a></li>
@@ -19,44 +43,94 @@
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </div>
-    <div class="main">
+    </header>
+
+    <!-- Main Section -->
+    <main class="main" id="home">
         <div class="image">
-            <img src="Me.png" alt="Profile Picture">
+            <img src="Me.png" alt="Profile Picture of Shawaiz" loading="lazy">
         </div>
         <div class="content">
-            <h1>SHAWAIZ</h1>
-            <h3>I am a web developer and graphic designer</h3>
+            <h1>HI! I AM SHAWAIZ</h1>
+             <p id="demo"></p> 
+            
             <div class="btn-group">
                 <a href="#projects" class="btn btn-primary">
-                <i class="fas fa-rocket">View Projects</i></a>
-                 <a href="#contact" class="btn btn-secondary">
-                <i class="fas fa-paper-plane">Contact</i></a>
+                    <i class="fas fa-rocket"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Contact
+                </a>
             </div>
             <div class="social-icons">
-                <a href="https://instagram.com/shawaiz.maqsood"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/ShawaizMaqsood0"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/shawaiz-maqsood"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://instagram.com/shawaiz.maqsood" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Shawaiz-maqsood" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/shawaiz-maqsood" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
-    </div>
+    </main>
+
+    <!-- Navigation / Content Sections -->
     <section class="navigation">
-        <div class="about" id="about">
+        <section class="about" id="about">
             <h2>About Me</h2>
             <p>I am a passionate web developer with a keen interest in creating dynamic and responsive websites. I also have a flair for graphic design, which allows me to create visually appealing content.</p>
-        </div>
-        <div class="skills" id="skills">
+        </section>
+
+        <section class="skills" id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li><i class="fa-brands fa-html5"></i></li>
-                <li><i class="fa-brands fa-css3-alt"></i></li>
-                <li><i class="fa-brands fa-js"></i></li>
-                <li><i class="fa-brands fa-java"></i></li>
-                <li><i class="fa-brands fa-python"></i></li>
-                <li><i class="fa-brands fa-figma"></i></li>
-            </ul>
-        </div>
-        <div class="services" id="services">
+
+            <h3><i class="fa-brands fa-html5"></i> HTML</h3>
+            <div class="progress-bar">
+                <div class="progress1" style="width: 95%;">
+                    <span class="progress-label">95%</span>
+                </div>
+            </div>
+
+            <h3><i class="fa-brands fa-css3-alt"></i> CSS</h3>
+            <div class="progress-bar">
+                <div class="progress2" style="width: 90%;">
+                    <span class="progress-label">90%</span>
+                </div>
+            </div>
+
+            <h3><i class="fa-brands fa-js"></i> JavaScript</h3>
+            <div class="progress-bar">  
+                <div class="progress3" style="width: 65%;">
+                    <span class="progress-label">65%</span>
+                </div>
+            </div>
+
+            <h3><i class="fa-brands fa-python"></i> Python</h3>
+            <div class="progress-bar">
+                <div class="progress4" style="width: 65%;">
+                    <span class="progress-label">65%</span>
+                </div>
+            </div>
+
+            <h3><i class="fa-brands fa-figma"></i> Figma</h3>
+            <div class="progress-bar">  
+                <div class="progress5" style="width: 70%;">
+                    <span class="progress-label">70%</span>
+                </div>
+            </div>
+
+            <h3><i class="fa-brands fa-adobe"></i> Adobe Suite</h3>
+            <div class="progress-bar">
+                <div class="progress6" style="width: 80%;">
+                    <span class="progress-label">80%</span>
+                </div>
+            </div>
+
+            <h3><i class="fa-brands fa-java"></i> Java</h3>
+            <div class="progress-bar">
+                <div class="progress7" style="width: 75%;">
+                    <span class="progress-label">75%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
             <h2>Services</h2>
             <ul>
                 <li>Portfolio Website</li>
@@ -66,44 +140,43 @@
                 <li>Social Media Designs</li>
                 <li>Logo Designs</li>
             </ul>
-        </div>
-        <div class="projects" id="projects">
+        </section>
+
+        <section class="projects" id="projects">
             <h2>Projects</h2>
             <p>Check out my latest projects.</p>
-            
-            <img src="Logo Mockup (1).png" alt="">
-            <img src="Logo Mockup (2).png" alt="">
-        </div>
-        
+            <img src="Logo Mockup (1).png" alt="Project 1 - Logo Mockup" loading="lazy">
+            <img src="Logo Mockup (2).png" alt="Project 2 - Logo Mockup" loading="lazy">
+        </section>
     </section>
-    
-    <section class="form">
-        <div class="page-wrapper"></div>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
         <div class="form-container">
-            <form class="form">
-                 <div class="contact" id="contact">
             <h2>Contact Me</h2>
             <p>If you would like to get in touch, feel free to reach out via email at
-    <a href="mailto:shawaiz.maqsood@example.com">shawaiz.maqsood@example.com</a>
-    </p>
-        </div>
+                <a href="mailto:shawaiz.maqsood@example.com">shawaiz.maqsood@example.com</a>
+            </p>
+            <form class="form" action="#" method="POST">
                 <div class="form-group">
-          <label for="email">Company Email</label>
-          <input type="text" id="email" name="email" required="email" placeholder="Enter your company email">
+                    <label for="email">Company Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your company email">
+                </div>
+                <div class="form-group">
+                    <label for="textarea">How Can We Help You?</label>
+                    <textarea name="textarea" id="textarea" rows="10" cols="50" required placeholder="Describe your project or message..."></textarea>
+                </div>
+                <button class="form-submit-btn" type="submit">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-          <label for="textarea">How Can We Help You?</label>
-          <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
-        </div>
-        <button class="form-submit-btn" type="submit">Submit</button>
-      </form>
-    </div>
     </section>
-    
-    <section class="footer">
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2023 Shawaiz. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
+</main>
 </body>
 </html>
